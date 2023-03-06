@@ -1,0 +1,537 @@
+<html lang="en">
+
+<head>
+    <title>Add Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style_sheets/style.css">
+</head>
+
+<body>
+    <header class="header ">
+        <div class="container">
+            <div class="row v-center">
+                <div class="header-item item-left">
+                    <div class="">
+                        <a href="<?php echo base_url()?>"><img class="logo" src="style_sheets/pictures/logo.png" width="60%"></a>
+                    </div>
+                </div>
+                <div class="header-item item-center">
+                    <div class="menu-overlay">
+                    </div>
+                    <nav class="menu ">
+                        <div class="mobile-menu-head">
+                            <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                            <div class="current-menu-title"></div>
+                            <div class="mobile-menu-close">&times;</div>
+                        </div>
+                        <ul class="menu-main ulhide">
+                            <li>
+                                <a href="<?php echo base_url()?>" class="navtxt home">Home</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url()?>profile" class=" navtxt profile">Profile</a>
+                            </li>
+                            <li class="menu-item-has-children d-xl-none">
+                                <a href="#" class="c1 navtxt services">Services <i class="fa fa-angle-down"></i></a>
+                                <div class="sub-menu mega-menu mega-menu-column-4 d-xl-none">
+                                    <div class="list-item">
+                                        <h4 class="title titcol c4">VAPT</h4>
+                                        <ul class="ulhide">
+                                            <li class="mb-3"><a class="sertxt wapt" href="<?php echo base_url()?>services/wapt">Web Application Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt mobile_pt" href="<?php echo base_url()?>services/mobile_pt">Mobile Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt api" href="<?php echo base_url()?>services/api">API Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt network-penetration-testing" href="<?php echo base_url()?>services/network_penetration_testing">Network Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt cloud_penetration_testing" href="<?php echo base_url()?>services/cloud_penetration_testing">Cloud Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt wireless_pt" href="<?php echo base_url()?>services/wireless_pt">Wireless Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt iot_security_testing" href="<?php echo base_url()?>services/iot_security_testing">IoT Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt firewall" href="<?php echo base_url()?>services/firewall">Firewall Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt embedded" href="<?php echo base_url()?>services/embedded">Embedded Device Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt database_pt" href="<?php echo base_url()?>services/database_pt">Database Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt server_hardening" href="<?php echo base_url()?>services/server_hardening">Server Hardening</a></li>
+                                            <li class="mb-3"><a class="sertxt secure_code_review" href="<?php echo base_url()?>services/secure_code_review">Secure Code Review</a></li>
+                                            <li class="mb-3"><a class="sertxt thick_thin" href="<?php echo base_url()?>services/thick_thin">Thick & Thin Client Application Security</a></li>
+                                            <li class="mb-3"><a class="sertxt medical_device" href="<?php echo base_url()?>services/medical_device">Medical Device Security Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt blockchain" href="<?php echo base_url()?>services/blockchain">Block Chain Security</a></li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="list-item">
+                                        <h4 class="title titcol c4">Compliance</h4>
+                                        <ul class="ulhide">
+                                            <li class="mb-3 pt-2"><a class="sertxt p-2" href="#">ISO/IEC 27001 Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt iso" href="<?php echo base_url()?>services/iso">ISO/IEC 27001 Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt soc2" href="<?php echo base_url()?>services/soc2">SOC2 Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt gdpr" href="<?php echo base_url()?>services/gdpr">GDPR Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt hipaa" href="<?php echo base_url()?>services/hipaa">HIPAA Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt pci_dss" href="<?php echo base_url()?>services/pci_dss">PCI DSS Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt cyber_jagrookta" href="<?php echo base_url()?>services/cyber_jagrookta">Cyber Jagrookta Diwas</a></li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="list-item">
+                                        <h4 class="title titcol c4">Managed Security</h4>
+                                        <ul class="ulhide">
+                                            <li class="mb-3"><a class="sertxt application_security" href="<?php echo base_url()?>services/application_security">Application Security</a></li>
+                                            <li class="mb-3"><a class="sertxt compilance" href="<?php echo base_url()?>services/compilance">Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt iam" href="<?php echo base_url()?>services/iam">Identity and access control</a></li>
+                                            <li class="mb-3"><a class="sertxt risk" href="<?php echo base_url()?>services/risk">Risk advisory</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="list-item">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a class=" d-none d-xl-block navtxt industries" href="<?php echo base_url()?>industries">Industries <i class="fa fa-angle-down  fs-5"></i></a>
+                                <div class="sub-menu mega-menu mega-menu-column-44  d-none d-xl-block">
+                                    <div class="h5 c4">Industries</div>
+                                    <hr>
+                                    <div class="" id="">
+                                        <div class="list-item">
+                                            <h4 class="title text-center "></h4>
+                                            <div class="row">
+                                                <ul class="col-sm-4 ulhide">
+                                                    <li><a class="sertxt financial" href="<?php echo base_url()?>industries/finiacial">Financial</a></li>
+                                                    <li><a class="sertxt insurance" href="<?php echo base_url()?>industries/insurance">Insurance</a></li>
+                                                    <li><a class="sertxt healthcare" href="<?php echo base_url()?>industries/healthcare">Healthcare</a></li>
+                                                    <li><a class="sertxt retail" href="<?php echo base_url()?>industries/retail">Retail</a></li>
+                                                    <li><a class="sertxt telecom" href="<?php echo base_url()?>industries/telecom">Telecom</a></li>
+                                                    <li><a class="sertxt ecom" href="<?php echo base_url()?>industries/ecom">E-commerce</a></li>
+                                                    <li><a class="sertxt delivery" href="<?php echo base_url()?>industries/delivery">Delivery Services</a></li>
+                                                    <li><a class="sertxt education" href="<?php echo base_url()?>industries/education">Education</a></li>
+                                                </ul>
+                                                <ul class="col-sm-8 mx-auto ulhide">
+                                                    <li><a class="sertxt ott" href="<?php echo base_url()?>industries/ott">OTT Platforms</a></li>
+                                                    <li><a class="sertxt airlines" href="<?php echo base_url()?>industries/airlines">Airlines</a></li>
+                                                    <li><a class="sertxt renewable" href="<?php echo base_url()?>industries/renewable">Renewable Energy Sector</a></li>
+                                                    <li><a class="sertxt automobile" href="<?php echo base_url()?>industries/automobile">Automobile</a></li>
+                                                    <li><a class="sertxt ots" href="<?php echo base_url()?>industries/ots">Operational Technology (OT) Security</a></li>
+                                                    <li><a class="sertxt manufacturing" href="<?php echo base_url()?>industries/manufacturing">Manufacturing</a></li>
+                                                    <li><a class="sertxt communication_media" href="<?php echo base_url()?>industries/communication_media">Communications and Media</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item-has-children d-xl-none">
+                                <a href="#" class="c1 navtxt industries">Industries <i class="fa fa-angle-down"></i></a>
+                                <div class="sub-menu mega-menu mega-menu-column-4 d-xl-none">
+                                    <div class="list-item">
+                                        <h4 class="title c4">Industries</h4>
+                                        <ul class="ulhide">
+                                            <li class="p-2"><a class="sertxt financial " href="<?php echo base_url()?>industries/finiacial">Financial</a></li>
+                                            <li class="p-2"><a class="sertxt insurance " href="<?php echo base_url()?>industries/insurance">Insurance</a></li>
+                                            <li class="p-2"><a class="sertxt healthcare " href="<?php echo base_url()?>industries/healthcare">Healthcare</a></li>
+                                            <li class="p-2"><a class="sertxt retail " href="<?php echo base_url()?>industries/retail">Retail</a></li>
+                                            <li class="p-2"><a class="sertxt telecom " href="<?php echo base_url()?>industries/telecom">Telecom</a></li>
+                                            <li class="p-2"><a class="sertxt ecom " href="<?php echo base_url()?>industries/ecom">E-commerce</a></li>
+                                            <li class="p-2"><a class="sertxt delivery " href="<?php echo base_url()?>industries/delivery">Delivery Services</a></li>
+                                            <li class="p-2"><a class="sertxt education " href="<?php echo base_url()?>industries/education">Education</a></li>
+                                            <li class="p-2"><a class="sertxt ott " href="<?php echo base_url()?>industries/ott">OTT Platforms</a></li>
+                                            <li class="p-2"><a class="sertxt airlines " href="<?php echo base_url()?>industries/airlines">Airlines</a></li>
+                                            <li class="p-2"><a class="sertxt renewable " href="<?php echo base_url()?>industries/renewable">Renewable Energy Sector</a></li>
+                                            <li class="p-2"><a class="sertxt automobile " href="<?php echo base_url()?>industries/automobile">Automobile</a></li>
+                                            <li class="p-2"><a class="sertxt ots " href="<?php echo base_url()?>industries/ots">Operational Technology (OT) Security</a></li>
+                                            <li class="p-2"><a class="sertxt manufacturing " href="<?php echo base_url()?>industries/manufacturing">Manufacturing</a></li>
+                                            <li class="p-2"><a class="sertxt communication_media " href="<?php echo base_url()?>industries/communication_media">Communications and Media</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url()?>contact" class="c1 navtxt contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-item item-right">
+                    <div class="mobile-menu-trigger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container pt-5">
+            <div class="row pt-5">
+                <div class="col-sm-7 row pt-5 ">
+                    <div class="pictures col-sm-2">
+                        <img id="pic1" onmouseover="changeImage('style_sheets/pictures/img1.webp', 1)" src="style_sheets/pictures/img1.webp" width="100%">
+                        <img id="pic2" onmouseover="changeImage('style_sheets/pictures/img2.webp', 2)" src="style_sheets/pictures/img2.webp" width="100%">
+                        <img id="pic3" onmouseover="changeImage('style_sheets/pictures/img3.webp', 3)" src="style_sheets/pictures/img3.webp" width="100%">
+                        <img id="pic4" onmouseover="changeImage('style_sheets/pictures/img4.webp', 4)" src="style_sheets/pictures/img4.webp" width="100%">
+                        <img id="pic5" onmouseover="changeImage('style_sheets/pictures/img5.webp', 5)" src="style_sheets/pictures/img5.webp" width="100%">
+                        <img id="pic6" onmouseover="changeImage('style_sheets/pictures/img6.webp', 6)" src="style_sheets/pictures/img6.webp" width="100%">
+                        <img id="pic6" onmouseover="changeImage('style_sheets/pictures/img6.webp', 6)" src="style_sheets/pictures/img6.webp" width="100%">
+                        <img id="pic6" onmouseover="changeImage('style_sheets/pictures/img6.webp', 6)" src="style_sheets/pictures/img6.webp" width="100%">
+                        <img id="pic6" onmouseover="changeImage('style_sheets/pictures/img6.webp', 6)" src="style_sheets/pictures/img6.webp" width="100%">
+                        <img id="pic6" onmouseover="changeImage('style_sheets/pictures/img6.webp', 6)" src="style_sheets/pictures/img6.webp" width="100%">
+                        <img id="pic6" onmouseover="changeImage('style_sheets/pictures/img6.webp', 6)" src="style_sheets/pictures/img6.webp" width="100%">
+                        <img id="pic6" onmouseover="changeImage('style_sheets/pictures/img6.webp', 6)" src="style_sheets/pictures/img6.webp" width="100%">
+                        <img id="pic6" onmouseover="changeImage('style_sheets/pictures/img6.webp', 6)" src="style_sheets/pictures/img6.webp" width="100%">
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="d-flex">
+                            <div class="picture" id="picture">
+                                <div class="rect p-5" id="rect"></div>
+                                <img id="pic" src="style_sheets/pictures/img1.webp" class="productimg" width="100%">
+                            </div>
+                            <div class="zoom" id="zoom"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5 p-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                    <h3>Dice and Spice</h3>
+                    <div class="col-sm-5 fs-5 text-secondary">&#8377; <del>4567</del> <span class="c3 fs-5 p-2">&#8377; 1290</span>
+                        <span class="st"> Save ₹ 700</span></div>
+                    <div class="st">(Inclusive of taxes)</div>
+                    <div class="d-flex">
+                        <i class="fa-solid fa-truck fs-2 p-3"></i>
+                        <div class="pt-3">Free shipping on orders above ₹ 999</div>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fa-regular fa-heart fs-2 p-3"></i>
+                        <div class="pt-3">Made with love in India</div>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fa-solid fa-indian-rupee-sign fs-2 p-3"></i>
+                        <div class="pt-3">All Transactions are 100% Secure</div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="productstatus p-2 m-2 mx-3"></div>
+                        <div class="pt-1">In stock, ready to ship</div>
+                    </div>
+                    <div class="text-bold p-3">Check for the earliest delivery date</div>
+                    <div class="d-flex">
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="Enter Pincode" class="p-2 form-control ">
+                        </div>
+                        <input type="button" class="btn btn-danger p-2 mx-2 btn btn-block col-sm-4" name="" value="check">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="atcbtn btn text-center mt-3">Add to cart</div>
+                        <div class="buybtn btn text-center mt-3">Buy Now</div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="c3 fs-5">Description</div>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            What does it take to make the perfect naughty board game? Of course, it needs to be sexy, naughty and embarrassingly dirty. But most importantly, it needs to continue to be unpredictably exciting, even after playing it for a few times.
+                            <br><br>
+                            What makes Dice and Spice one of India’s favourite gifts? First, sex sells (hell yeah!). Second, even after playing it a few times, you still look forward to playing more (we know, we’ve played it).
+                            <br><br>
+                            How to play:
+                            This naughty board game has 4 sets of cards. Roll the dice, move your player and pick a corresponding colored card. If you can perform the act on the card, you stay. If you chicken out, you go back to the earlier slot. You may have to sit on your partner’s lap till the next round, allow your partner to take off one piece of your clothing, give a hickey in 60 seconds, make your partner flash a body part of your choice and do lots of other embarrassingly amazing things to each other to win. And even if you lose, you still have a good time.
+                            <br><br>
+                            Dare Cards:
+                            Examples:
+                            Give your partner a lap dance while singing a song yourself
+                            Turn on your partner in 30 seconds using just your lips and win an extra turn
+                            Strike a calendar model pose and get a picture taken by your partner
+                            <br><br>
+                            Truth Cards:
+                            Examples:
+                            What is your weirdest fantasy?
+                            Have you ever stripped in front of the mirror?
+                            One habit of your partner you don’t particularly like?
+                            <br><br>
+                            60-Second Challenge Cards:
+                            Examples:
+                            Give a hickey
+                            Google 3 weird kisses and try each one of them for 60 seconds
+                            The opponent is free to browse your phone for the next 60 seconds
+                            <br><br>
+                            Performance Cards:
+                            Examples:
+                            You’re an influencer. Go live on social media and talk about your skincare routine.
+                            You’re an improv artist. The opponent can give you any situation to improve on.
+                            You’re a comedian. Roast the opponent.
+                            <br><br>
+                            Specifications:
+                            Size of the box: 32.5 x 15 x 3.5 cms
+                            Number of truth cards: 32
+                            Number of dare cards: 31
+                            Number of 60-second challenge cards: 29
+                            Number of performance cards: 32
+                            Note: This is a pre-packaged standardised gift and cannot be customised.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <div class="c3 fs-5">Shipping information</div>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            We ship all our surprises through the most reliable delivery partners in India. All surprises are shipped within one working day of receiving your order. Tracking details for your shipment will be shared over SMS and email immediately after your order is shipped.
+                            For priority shipping orders, we ship on the same day if the order and the customization details are received before 1 PM.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <div class="c3 fs-5">Refund Policy</div>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Unhappy with what you got? Email us on surprises@oyehappy.com or call us on 9966687654 and we shall dedicate a Happiness Consultant to resolve your issue within 8 working hours.
+                            If you opt for priority shipping and we're unable to deliver within 24 hours (except Sundays) of the committed date, priority shipping charges are fully refunded.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="style_sheets/pictures/dp.webp" width="100%" class="p-5">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="style_sheets/pictures/dp.webp" width="100%" class="p-5">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="style_sheets/pictures/dp.webp" width="100%" class="p-5">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="style_sheets/pictures/dp.webp" width="100%" class="p-5">
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="commentsec">
+        <div class="container p-5">
+            <div class="h3 c3"> Customer Reviews</div>
+
+<i style="font-family: font-awesome-stars; font-style: normal; font-weight: normal; font-size: 15px; text-align: center; letter-spacing: 1px; color: rgb(249, 189, 54);"></i>
+
+        </div>
+    </section>
+    <!-- <div class="bg-warning p-5 ">
+  <div class="mx-auto col-sm-4 d-flex">  <input type="" class="p-3 form-control " name="" placeholder="Enter the email"><input type="button" class="btn btn-danger p-3" name="" value="Subscribe"></div>
+</div>
+
+<footer class="footer pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="<?php echo base_url()?>profile">profile</a></i>
+                    <li><a href="<?php echo base_url()?>training">Training</a></li>
+                    <li><a href="<?php echo base_url()?>careers">Careers</a></li>
+                    <li><a href="<?php echo base_url()?>blog">Blog</a></li>
+                    <li><a href="<?php echo base_url()?>landingpages/tandc">Terms & Conditions</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Industries</h4>
+                <ul>
+                    <li><a href="<?php echo base_url()?>industries/finiacial">Financial</a></li>
+                    <li><a href="<?php echo base_url()?>industries/insurance">Insurance</a></li>
+                    <li><a href="<?php echo base_url()?>industries/retail">Retail</a></li>
+                    <li><a href="<?php echo base_url()?>industries/telecom">Telecom</a></li>
+
+                    <li> <a href="<?php echo base_url()?>industries" role="button">
+                            <span class="c5">Show More </span>
+                        </a></li>
+          </ul>
+            </div>
+
+
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="<?php echo base_url()?>services/application_security">application security</a></li>
+                    <li><a href="<?php echo base_url()?>services/network_penetration_testing">network penetration testing</a></li>
+                    <li><a href="<?php echo base_url()?>services/cloud_penetration_testing">cloud penetration testing</a></li>
+                    <li><a href="<?php echo base_url()?>services/iot_security_testing">iot security testing</a></li>
+
+
+                    <li> <a href="<?php echo base_url()?>services" role="button">
+                            <span class="c5">Show More </span>
+                        </a></li>
+   
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/adiroha-solutions/mycompany/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/AdirohaSolutions" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/adiroha_solutions/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center cpy mt-4 pb-2">Copyright © 2022 by Adiroha Solutions. All Rights Reserved.</div>
+</footer>
+ -->
+    <!----------------------------- Codes Ends hereeee ----------------------------------->
+    <!--    <div class="btn p-3 upbtn">
+        <i class="fa fa-caret-up" aria-hidden="true"></i>
+    </div> -->
+    <script type="text/javascript">
+    var picture = document.querySelector('#pic');
+    var picture1 = document.querySelector('#pic1');
+    var picture2 = document.querySelector('#pic2');
+    var picture3 = document.querySelector('#pic3');
+    var picture4 = document.querySelector('#pic4');
+    var picture5 = document.querySelector('#pic5');
+    var picture6 = document.querySelector('#pic6');
+    var mainContainer = document.querySelector('#picture');
+    var rect = document.querySelector("#rect");
+    var zoom = document.querySelector('#zoom');
+    picList = [picture1, picture2, picture3, picture4, picture5, picture6]
+    let picActive = 1;
+    picture1.classList.add('img-active');
+    function changeImage(imgSrc, n) {
+        picture.src = imgSrc;
+        zoom.style.backgroundImage = "url(" + imgSrc + ")";
+        picList[picActive - 1].classList.remove('img-active');
+        picList[n - 1].classList.add('img-active');
+        picActive = n;
+    }
+
+    let w1 = mainContainer.offsetWidth;
+    let h1 = mainContainer.offsetHeight;
+    let ratio = 3;
+    zoom.style.backgroundSize = w1 * ratio + 'px ' + h1 * ratio + 'px';
+    let x, y, xx, yy;
+    let w2 = rect.offsetWidth;
+    let h2 = rect.offsetHeight;
+    zoom.style.width = w2 * ratio + 'px';
+    zoom.style.height = h2 * ratio + 'px';
+    w2 = w2 / 2;
+    h2 = h2 / 2;
+    function move(event) {
+        x = event.offsetX;
+        y = event.offsetY;
+        xx = x - w2;
+        yy = y - h2;
+        if (x < w2) {
+            x = w2;
+            xx = 0;
+        }
+        if (x > w1 - w2) {
+            x = w1 - w2;
+            xx = x - w2;
+        }
+        if (y < h2) {
+            y = h2;
+            yy = 0;
+        }
+        if (y > h1 - h2) {
+            y = h1 - h2;
+        }
+        xx = xx * ratio;
+        yy = yy * ratio;
+        rect.style.left = x + 'px';
+        rect.style.top = y + 'px';
+        zoom.style.backgroundPosition = '-' + xx + 'px ' + '-' + yy + 'px';
+    }
+
+    mainContainer.addEventListener('mousemove', function() {
+        move(event);
+        addOpacity();
+    })
+    function addOpacity() {
+        rect.classList.add('rect-active');
+        zoom.classList.add('rect-active');
+    }
+    function removeOpacity() {
+        zoom.classList.remove('rect-active');
+    }
+    mainContainer.addEventListener('mouseout', function() {
+        removeOpacity();
+    })
+    </script>
+    <script>
+    new Swiper('.testimonials-slider', {
+        speed: 600,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        slidesPerView: 'auto',
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 40
+            },
+
+            1200: {
+                slidesPerView: 3,
+            }
+        }
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+        $('.upbtn').click(function() {
+            $('html,body').animate({
+                scrollTop: $('#sec1').offset().top
+            }, 200);
+        });
+
+        $(window).scroll(function() {
+            var upbtn = $(window).scrollTop();
+            if (upbtn > 0) {
+                $(".upbtn").css("opacity", "1");
+                $(".upbtn").css("transition", ".5s");
+            } else {
+                $(".upbtn").css("opacity", "0");
+                $(".upbtn").css("transition", ".5s");
+            }
+        });
+
+
+
+    });
+    </script>
+    <script>
+    new WOW().init();
+    </script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+</body>
+
+</html>

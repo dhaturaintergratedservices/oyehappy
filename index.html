@@ -1,0 +1,711 @@
+<html lang="en">
+
+<head>
+    <title>Add Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style_sheets/style.css">
+</head>
+
+<body>
+    <header class="header ">
+        <div class="container">
+            <div class="row v-center">
+                <div class="header-item item-left">
+                    <div class="">
+                        <a href="<?php echo base_url()?>"><img class="logo" src="style_sheets/pictures/logo.png" width="60%"></a>
+                    </div>
+                </div>
+                <div class="header-item item-center">
+                    <div class="menu-overlay">
+                    </div>
+                    <nav class="menu ">
+                        <div class="mobile-menu-head">
+                            <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                            <div class="current-menu-title"></div>
+                            <div class="mobile-menu-close">&times;</div>
+                        </div>
+                        <ul class="menu-main ulhide">
+                            <li>
+                                <a href="<?php echo base_url()?>" class="navtxt home">Home</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url()?>profile" class=" navtxt profile">Profile</a>
+                            </li>
+
+                            <li class="menu-item-has-children d-xl-none">
+                                <a href="#" class="c1 navtxt services">Services <i class="fa fa-angle-down"></i></a>
+                                <div class="sub-menu mega-menu mega-menu-column-4 d-xl-none">
+                                    <div class="list-item">
+                                        <h4 class="title titcol c4">VAPT</h4>
+                                        <ul class="ulhide">
+                                            <li class="mb-3"><a class="sertxt wapt" href="<?php echo base_url()?>services/wapt">Web Application Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt mobile_pt" href="<?php echo base_url()?>services/mobile_pt">Mobile Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt api" href="<?php echo base_url()?>services/api">API Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt network-penetration-testing" href="<?php echo base_url()?>services/network_penetration_testing">Network Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt cloud_penetration_testing" href="<?php echo base_url()?>services/cloud_penetration_testing">Cloud Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt wireless_pt" href="<?php echo base_url()?>services/wireless_pt">Wireless Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt iot_security_testing" href="<?php echo base_url()?>services/iot_security_testing">IoT Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt firewall" href="<?php echo base_url()?>services/firewall">Firewall Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt embedded" href="<?php echo base_url()?>services/embedded">Embedded Device Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt database_pt" href="<?php echo base_url()?>services/database_pt">Database Penetration Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt server_hardening" href="<?php echo base_url()?>services/server_hardening">Server Hardening</a></li>
+                                            <li class="mb-3"><a class="sertxt secure_code_review" href="<?php echo base_url()?>services/secure_code_review">Secure Code Review</a></li>
+                                            <li class="mb-3"><a class="sertxt thick_thin" href="<?php echo base_url()?>services/thick_thin">Thick & Thin Client Application Security</a></li>
+                                            <li class="mb-3"><a class="sertxt medical_device" href="<?php echo base_url()?>services/medical_device">Medical Device Security Testing</a></li>
+                                            <li class="mb-3"><a class="sertxt blockchain" href="<?php echo base_url()?>services/blockchain">Block Chain Security</a></li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="list-item">
+                                        <h4 class="title titcol c4">Compliance</h4>
+                                        <ul class="ulhide">
+                                            <li class="mb-3 pt-2"><a class="sertxt p-2" href="#">ISO/IEC 27001 Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt iso" href="<?php echo base_url()?>services/iso">ISO/IEC 27001 Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt soc2" href="<?php echo base_url()?>services/soc2">SOC2 Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt gdpr" href="<?php echo base_url()?>services/gdpr">GDPR Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt hipaa" href="<?php echo base_url()?>services/hipaa">HIPAA Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt pci_dss" href="<?php echo base_url()?>services/pci_dss">PCI DSS Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt cyber_jagrookta" href="<?php echo base_url()?>services/cyber_jagrookta">Cyber Jagrookta Diwas</a></li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="list-item">
+                                        <h4 class="title titcol c4">Managed Security</h4>
+                                        <ul class="ulhide">
+                                            <li class="mb-3"><a class="sertxt application_security" href="<?php echo base_url()?>services/application_security">Application Security</a></li>
+                                            <li class="mb-3"><a class="sertxt compilance" href="<?php echo base_url()?>services/compilance">Compliance</a></li>
+                                            <li class="mb-3"><a class="sertxt iam" href="<?php echo base_url()?>services/iam">Identity and access control</a></li>
+                                            <li class="mb-3"><a class="sertxt risk" href="<?php echo base_url()?>services/risk">Risk advisory</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="list-item">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a class=" d-none d-xl-block navtxt industries" href="<?php echo base_url()?>industries">Industries <i class="fa fa-angle-down  fs-5"></i></a>
+                                <div class="sub-menu mega-menu mega-menu-column-44  d-none d-xl-block">
+                                    <div class="h5 c4">Industries</div>
+                                    <hr>
+                                    <div class="" id="">
+                                        <div class="list-item">
+                                            <h4 class="title text-center "></h4>
+                                            <div class="row">
+                                                <ul class="col-sm-4 ulhide">
+                                                    <li><a class="sertxt financial" href="<?php echo base_url()?>industries/finiacial">Financial</a></li>
+                                                    <li><a class="sertxt insurance" href="<?php echo base_url()?>industries/insurance">Insurance</a></li>
+                                                    <li><a class="sertxt healthcare" href="<?php echo base_url()?>industries/healthcare">Healthcare</a></li>
+                                                    <li><a class="sertxt retail" href="<?php echo base_url()?>industries/retail">Retail</a></li>
+                                                    <li><a class="sertxt telecom" href="<?php echo base_url()?>industries/telecom">Telecom</a></li>
+                                                    <li><a class="sertxt ecom" href="<?php echo base_url()?>industries/ecom">E-commerce</a></li>
+                                                    <li><a class="sertxt delivery" href="<?php echo base_url()?>industries/delivery">Delivery Services</a></li>
+                                                    <li><a class="sertxt education" href="<?php echo base_url()?>industries/education">Education</a></li>
+                                                </ul>
+                                                <ul class="col-sm-8 mx-auto ulhide">
+                                                    <li><a class="sertxt ott" href="<?php echo base_url()?>industries/ott">OTT Platforms</a></li>
+                                                    <li><a class="sertxt airlines" href="<?php echo base_url()?>industries/airlines">Airlines</a></li>
+                                                    <li><a class="sertxt renewable" href="<?php echo base_url()?>industries/renewable">Renewable Energy Sector</a></li>
+                                                    <li><a class="sertxt automobile" href="<?php echo base_url()?>industries/automobile">Automobile</a></li>
+                                                    <li><a class="sertxt ots" href="<?php echo base_url()?>industries/ots">Operational Technology (OT) Security</a></li>
+                                                    <li><a class="sertxt manufacturing" href="<?php echo base_url()?>industries/manufacturing">Manufacturing</a></li>
+                                                    <li><a class="sertxt communication_media" href="<?php echo base_url()?>industries/communication_media">Communications and Media</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item-has-children d-xl-none">
+                                <a href="#" class="c1 navtxt industries">Industries <i class="fa fa-angle-down"></i></a>
+                                <div class="sub-menu mega-menu mega-menu-column-4 d-xl-none">
+                                    <div class="list-item">
+                                        <h4 class="title c4">Industries</h4>
+                                        <ul class="ulhide">
+                                            <li class="p-2"><a class="sertxt financial " href="<?php echo base_url()?>industries/finiacial">Financial</a></li>
+                                            <li class="p-2"><a class="sertxt insurance " href="<?php echo base_url()?>industries/insurance">Insurance</a></li>
+                                            <li class="p-2"><a class="sertxt healthcare " href="<?php echo base_url()?>industries/healthcare">Healthcare</a></li>
+                                            <li class="p-2"><a class="sertxt retail " href="<?php echo base_url()?>industries/retail">Retail</a></li>
+                                            <li class="p-2"><a class="sertxt telecom " href="<?php echo base_url()?>industries/telecom">Telecom</a></li>
+                                            <li class="p-2"><a class="sertxt ecom " href="<?php echo base_url()?>industries/ecom">E-commerce</a></li>
+                                            <li class="p-2"><a class="sertxt delivery " href="<?php echo base_url()?>industries/delivery">Delivery Services</a></li>
+                                            <li class="p-2"><a class="sertxt education " href="<?php echo base_url()?>industries/education">Education</a></li>
+                                            <li class="p-2"><a class="sertxt ott " href="<?php echo base_url()?>industries/ott">OTT Platforms</a></li>
+                                            <li class="p-2"><a class="sertxt airlines " href="<?php echo base_url()?>industries/airlines">Airlines</a></li>
+                                            <li class="p-2"><a class="sertxt renewable " href="<?php echo base_url()?>industries/renewable">Renewable Energy Sector</a></li>
+                                            <li class="p-2"><a class="sertxt automobile " href="<?php echo base_url()?>industries/automobile">Automobile</a></li>
+                                            <li class="p-2"><a class="sertxt ots " href="<?php echo base_url()?>industries/ots">Operational Technology (OT) Security</a></li>
+                                            <li class="p-2"><a class="sertxt manufacturing " href="<?php echo base_url()?>industries/manufacturing">Manufacturing</a></li>
+                                            <li class="p-2"><a class="sertxt communication_media " href="<?php echo base_url()?>industries/communication_media">Communications and Media</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url()?>contact" class="c1 navtxt contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-item item-right">
+                    <div class="mobile-menu-trigger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- --------------------------- Codes Start's From Here ----------------------------------->
+    <section id="sec1">
+    </section>
+    <section id="sec2">
+        <div class="container">
+            <div class="row p-5">
+                <div class="col-sm-2 ">
+                    <img src="style_sheets/pictures/img2.jpeg" width="100%" class="roundimg">
+                    <div class="text-center pt-3 c2">Birthday Gifts </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">
+                    <img src="style_sheets/pictures/img2.jpeg" width="100%" class="roundimg">
+                    <div class="text-center pt-3 c2">Birthday Gifts </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">
+                    <img src="style_sheets/pictures/img2.jpeg" width="100%" class="roundimg">
+                    <div class="text-center pt-3 c2">Birthday Gifts </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">
+                    <img src="style_sheets/pictures/img2.jpeg" width="100%" class="roundimg">
+                    <div class="text-center pt-3 c2">Birthday Gifts </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">
+                    <img src="style_sheets/pictures/img2.jpeg" width="100%" class="roundimg">
+                    <div class="text-center pt-3 c2">Birthday Gifts </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">
+                    <img src="style_sheets/pictures/img2.jpeg" width="100%" class="roundimg">
+                    <div class="text-center pt-3 c2">Birthday Gifts </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sec2">
+        <div class="container">
+            <div class="row ">
+                <div class="col-sm-6">
+                    <img src="style_sheets/pictures/banner1.webp" width="100%">
+                </div>
+                <div class="col-sm-6">
+                    <img src="style_sheets/pictures/banner1.webp" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="sec3">
+        <div class="container">
+            <div class="fs-3 c3">Birthday Gifts</div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="fs-3 c3">Birthday Gifts</div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 pt-5">
+            <img src="style_sheets/pictures/banner1.webp" width="100%">
+        </div>
+        <div class="container pt-5">
+            <div class="fs-3 c3">Birthday Gifts</div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="fs-3 c3">Birthday Gifts</div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="prodbox">
+                        <img src="style_sheets/pictures/test.avif" width="100%">
+                        <div class="p-2">Ted Talks</div>
+                        <div class="p-2 pb-0 prodtxt">Meet Ted. He’s cute, he’s cuddly, he’s squishy and he can TALK!</div>
+                        <hr>
+                        <div class="c3 p-2 pt-0"><b>Rs 1240</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="sec4">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="style_sheets/pictures/test2.avif" width="100%">
+                </div>
+                <div class="col-sm-4">
+                    <img src="style_sheets/pictures/test2.avif" width="100%">
+                </div>
+                <div class="col-sm-4">
+                    <img src="style_sheets/pictures/test2.avif" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sec5">
+        <div class="text-center">Our Customer Reviews</div>
+        <!-- ======= Testimonials Section ======= -->
+        <div id="testimonials" class="testimonials">
+            <div class="container ch">
+                <header class="section-header wow fadeInDown" data-wow-duration="1s" data-wow-delay="0s">
+                    <p>What <span class="c4">the clients have to say</span></p>
+                </header>
+                <div class="testimonials-slider swiper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p>
+                                    They really provide amazing services! Been associated for over an year now and find them the best in business. The team are all dedicated to serve.
+                                </p>
+                                <div class="profile mt-auto">
+                                    <img src="style_sheets/pictures/testimonial.png" class="testimonial-img" alt="">
+                                    <h3>MJ Patil</h3>
+                                    <h4>CEO </h4>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p>
+                                    Got what I was looking for at Dhatura. Happy to be associated the team as they were careful with every detail. Looking forward to working again.
+                                </p>
+                                <div class="profile mt-auto">
+                                    <img src="style_sheets/pictures/testimonial.png" class="testimonial-img" alt="">
+                                    <h3>Rakesh</h3>
+                                    <h4>Director </h4>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p>
+                                    Dhatura is wonderful! They've delivered the best application and saved my time. As a business woman, time means a lot to me and Dhatura has been on time everytime. Thanks!
+                                </p>
+                                <div class="profile mt-auto">
+                                    <img src="style_sheets/pictures/testimonial.png" class="testimonial-img" alt="">
+                                    <h3>Nisha Varma</h3>
+                                    <h4>Manager </h4>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p>
+                                    Needed a development team with full cooperative and received exactly the same treatment. Thanks team Dhatura.
+                                </p>
+                                <div class="profile mt-auto">
+                                    <img src="style_sheets/pictures/testimonial.png" class="testimonial-img" alt="">
+                                    <h3>Lakshmi Sagar</h3>
+                                    <h4>CEO </h4>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="container">
+    <div class="row">
+
+
+        <div class="col-sm-3">
+            <i class="fa-solid fa-users hc text-center mx-auto d-block"></i>
+            <div class="text-center p-2">750,000 HAPPY CUSTOMERS</div>
+
+        </div>
+
+
+        <div class="col-sm-3">
+            <i class="fa-solid fa-users hc text-center mx-auto d-block"></i>
+            <div class="text-center p-2">750,000 HAPPY CUSTOMERS</div>
+
+        </div>
+        <div class="col-sm-3">
+            <i class="fa-solid fa-users hc text-center mx-auto d-block"></i>
+            <div class="text-center p-2">750,000 HAPPY CUSTOMERS</div>
+        </div>
+        <div class="col-sm-3">
+            <i class="fa-solid fa-users hc text-center mx-auto d-block"></i>
+            <div class="text-center p-2">750,000 HAPPY CUSTOMERS</div>
+
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+    </section>
+
+
+<div class="bg-warning p-5 ">
+  <div class="mx-auto col-sm-4 d-flex">  <input type="" class="p-3 form-control " name="" placeholder="Enter the email"><input type="button" class="btn btn-danger p-3" name="" value="Subscribe"></div>
+</div>
+
+<footer class="footer pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="<?php echo base_url()?>profile">profile</a></i>
+                    <li><a href="<?php echo base_url()?>training">Training</a></li>
+                    <li><a href="<?php echo base_url()?>careers">Careers</a></li>
+                    <li><a href="<?php echo base_url()?>blog">Blog</a></li>
+                    <li><a href="<?php echo base_url()?>landingpages/tandc">Terms & Conditions</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Industries</h4>
+                <ul>
+                    <li><a href="<?php echo base_url()?>industries/finiacial">Financial</a></li>
+                    <li><a href="<?php echo base_url()?>industries/insurance">Insurance</a></li>
+                    <li><a href="<?php echo base_url()?>industries/retail">Retail</a></li>
+                    <li><a href="<?php echo base_url()?>industries/telecom">Telecom</a></li>
+
+                    <li> <a href="<?php echo base_url()?>industries" role="button">
+                            <span class="c5">Show More </span>
+                        </a></li>
+          </ul>
+            </div>
+
+
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="<?php echo base_url()?>services/application_security">application security</a></li>
+                    <li><a href="<?php echo base_url()?>services/network_penetration_testing">network penetration testing</a></li>
+                    <li><a href="<?php echo base_url()?>services/cloud_penetration_testing">cloud penetration testing</a></li>
+                    <li><a href="<?php echo base_url()?>services/iot_security_testing">iot security testing</a></li>
+
+
+                    <li> <a href="<?php echo base_url()?>services" role="button">
+                            <span class="c5">Show More </span>
+                        </a></li>
+   
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/adiroha-solutions/mycompany/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/AdirohaSolutions" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <!--<a href="#" target="_blank" ><i class="fab fa-twitter"></i></a>-->
+                    <a href="https://www.instagram.com/adiroha_solutions/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center cpy mt-4 pb-2">Copyright © 2022 by Adiroha Solutions. All Rights Reserved.</div>
+</footer>
+
+
+
+
+
+    <!----------------------------- Codes Ends hereeee ----------------------------------->
+    <!--    <div class="btn p-3 upbtn">
+        <i class="fa fa-caret-up" aria-hidden="true"></i>
+    </div> -->
+    <script>
+    new Swiper('.testimonials-slider', {
+        speed: 600,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        slidesPerView: 'auto',
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 40
+            },
+
+            1200: {
+                slidesPerView: 3,
+            }
+        }
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+        $('.upbtn').click(function() {
+            $('html,body').animate({
+                scrollTop: $('#sec1').offset().top
+            }, 200);
+        });
+
+        $(window).scroll(function() {
+            var upbtn = $(window).scrollTop();
+            if (upbtn > 0) {
+                $(".upbtn").css("opacity", "1");
+                $(".upbtn").css("transition", ".5s");
+            } else {
+                $(".upbtn").css("opacity", "0");
+                $(".upbtn").css("transition", ".5s");
+            }
+        });
+
+
+
+    });
+    </script>
+    <script>
+    new WOW().init();
+    </script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+</body>
+
+</html>
